@@ -77,7 +77,9 @@ Built a dashboard connecting to both the cleaned CSV output and the live MySQL d
 
 ## How to Reproduce
 
-1. Download the dataset from Kaggle and import into MySQL using the schema and load statements (see Phase 1 notes above).
-2. Run the queries in `phase2_analysis.sql` against the `olist_ecommerce` database.
-3. Open `phase3_cleaning.ipynb` in Jupyter/VS Code, update the MySQL connection credentials, and run all cells.
-4. Open `olist_dashboard.pbix` in Power BI Desktop; refresh the data source connections to point to your local MySQL instance.
+1. Download the Olist dataset from Kaggle (link above) — you'll get 9 CSVs.
+2. Set up a MySQL database and import the 4 core CSVs (orders, order_items, products, customers) — see Phase 1 above for the table schemas and how I handled blank date fields.
+3. Run the queries in `phase2_analysis.sql` against your database.
+4. Open `phase3_cleaning.ipynb`, put in your own MySQL password, and run the notebook top to bottom.
+5. Open `olist_dashboard.pbix` in Power BI Desktop — you'll need to point the data source at your own local MySQL setup since mine's obviously not accessible to you.
+   
